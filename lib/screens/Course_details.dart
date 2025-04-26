@@ -106,7 +106,7 @@ class CourseDetails extends StatelessWidget {
                           SizedBox(width: 10),
                           _buildInfoItem(
                             "أ.أحمد الأحمد",
-                            "assets/1564534_customer_man_user_account_profile_icon 1.png",
+                            "assets/images/1564534_customer_man_user_account_profile_icon 1.png",
                           ),
                         ],
                       ),
@@ -423,7 +423,7 @@ Widget _buildCompactLtrContainer1(String title, String lesson, String Date,) {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         image: const DecorationImage(
-                          image: AssetImage("assets/1891021_approved_check_checkbox_checkmark_confirm_icon 1.png"),
+                          image: AssetImage("assets/images/1891021_approved_check_checkbox_checkmark_confirm_icon 1.png"),
                           fit: BoxFit.cover,
                         ),
                       ),

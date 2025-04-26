@@ -41,7 +41,7 @@ class _SplashScreenState extends State<SplashScreen>
         children: [
           // الصورة الخلفية
           Image.asset(
-            'assets/mask group.png', // المسار إلى الصورة الخلفية
+            'assets/images/mask group.png', // المسار إلى الصورة الخلفية
             fit: BoxFit.cover, // تغطية الشاشة بالكامل
             width: double.infinity,
             height: double.infinity,
@@ -49,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen>
           // اللوغو في المنتصف
           Center(
             child: Image.asset(
-              'assets/logo.png', // المسار إلى اللوغو
+              'assets/images/logo.png', // المسار إلى اللوغو
               width: 150, // اضبط حجم اللوغو حسب الحاجة
               height: 150,
             ),

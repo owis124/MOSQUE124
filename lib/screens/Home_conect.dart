@@ -11,7 +11,7 @@ class HomeContent extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/Mask group.png"),
+            image: AssetImage("assets/images/Mask group.png"),
             fit: BoxFit.cover,
           ),
         ),
@@ -47,7 +47,7 @@ class HomeContent extends StatelessWidget {
                       color: Colors.white.withOpacity(0.8),
                       borderRadius: BorderRadius.circular(15),
                       image: const DecorationImage(
-                        image: AssetImage("assets/Frame 35@2x.png"),
+                        image: AssetImage("assets/images/Frame 35@2x.png"),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -97,7 +97,7 @@ class HomeContent extends StatelessWidget {
                             top: Radius.circular(15),
                           ),
                           child: Image.asset(
-                            'assets/istockphoto.png',
+                            'assets/images/istockphoto.png',
                             width: 292,
                             height: 157,
                             fit: BoxFit.cover,

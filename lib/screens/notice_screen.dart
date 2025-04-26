@@ -10,7 +10,7 @@ class NoticeScreen extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/Mask group.png"),
+            image: AssetImage("assets/images/Mask group.png"),
             fit: BoxFit.cover,
           ),
         ),

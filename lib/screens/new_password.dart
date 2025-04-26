@@ -23,7 +23,7 @@ class _NewPassword extends State<NewPassword> {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/Mask group.png'), // استخدام صورة للخلفية
+              image: AssetImage('assets/images/Mask group.png'), // استخدام صورة للخلفية
               fit: BoxFit.cover,
             ),
           ),
@@ -35,7 +35,7 @@ class _NewPassword extends State<NewPassword> {
                 children: [
                   SizedBox(height: 75),
                   Image.asset(
-                    'assets/logo1.png', // شعار التطبيق
+                    'assets/images/logo1.png', // شعار التطبيق
                     height: 100,
                   ),
                   Column(

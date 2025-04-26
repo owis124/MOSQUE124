@@ -16,7 +16,7 @@ class CourseDetails extends StatelessWidget {
         body: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/Mask group.png"),
+              image: AssetImage("assets/images/Mask group.png"),
               fit: BoxFit.cover,
             ),
           ),
@@ -69,7 +69,7 @@ class CourseDetails extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         image: const DecorationImage(
-                          image: AssetImage("assets/Maskgroup1.png"),
+                          image: AssetImage("assets/images/Maskgroup1.png"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -101,7 +101,7 @@ class CourseDetails extends StatelessWidget {
                         children: [
                           _buildInfoItem(
                             "جامع أبو بكر الصديق",
-                            "assets/7502326_location_map_pin_gps_mosque_icon 1.png",
+                            "assets/images/7502326_location_map_pin_gps_mosque_icon 1.png",
                           ),
                           SizedBox(width: 10),
                           _buildInfoItem(

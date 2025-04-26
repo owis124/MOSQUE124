@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:karem2/screens/HomeScreen.dart';
 import 'package:karem2/screens/end_screen.dart';
 import 'package:karem2/screens/new_password.dart';
 import 'package:karem2/screens/register_page.dart';
 import 'package:karem2/splash_screen.dart';
+
+import 'localization/MyLocalization.dart';
 
 
 void main() {
@@ -18,7 +21,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
     showSemanticsDebugger: false,
-   
+      locale: Locale('ar', 'SA'),
+      supportedLocales: [
+        Locale('ar', 'SA')
+      ],
+      localizationsDelegates: [
+        MyLocalization.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+
       home: RegisterPage(), 
    );
   }

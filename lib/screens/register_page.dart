@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:karem2/localization/MyLocalization.dart';
 import 'package:karem2/screens/HomeScreen.dart';
 import 'package:karem2/widgets/costum_text_field.dart';
 import 'package:karem2/widgets/custom_button.dart';
@@ -18,15 +19,12 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Directionality(
-        // تطبيق LTR على الصفحة
-        textDirection:
-            TextDirection.rtl, // تعيين اتجاه النص من اليسار إلى اليمين
-        child: Container(
+      body:
+        Container(
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
-                'assets/Mask group.png',
+                'assets/images/Mask group.png',
               ), // استخدام صورة للخلفية
               fit: BoxFit.cover,
             ),
@@ -39,14 +37,14 @@ class _RegisterPageState extends State<RegisterPage> {
                 children: [
                   SizedBox(height: 75),
                   Image.asset(
-                    'assets/logo1.png', // شعار التطبيق
+                    'assets/images/logo1.png', // شعار التطبيق
                     height: 100,
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'أهلاً بعودتك ',
+                        getTranslated(context, "welcome"),
                         style: TextStyle(
                           fontSize: 32,
                           color: Color(0xff18392b),
@@ -116,7 +114,6 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
           ),
         ),
-      ),
     );
   }
 }

@@ -23,7 +23,7 @@ class _EndScreen extends State<EndScreen> {
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/Mask group.png'), // Use a PNG or JPEG for the background
+            image: AssetImage('assets/images/Mask group.png'), // Use a PNG or JPEG for the background
             fit: BoxFit.cover,
           ),
         ),
@@ -36,7 +36,7 @@ class _EndScreen extends State<EndScreen> {
                 shrinkWrap: true, // To make the ListView take only the space it needs
                 children: [
                   Image.asset(
-                    'assets/Vector.png', // SVG logo or icon
+                    'assets/images/Vector.png', // SVG logo or icon
                     height: 100,
                   ),
                   SizedBox(height: 16),

@@ -38,8 +38,13 @@ dependencies:
   animated_bottom_navigation_bar: ^1.4.0
   badges: ^3.0.0
   percent_indicator: ^3.4.0
- 
-  
+
+  # localization support:
+  flutter_localizations:
+    sdk: flutter
+
+  flutter_screenutil: ^5.9.3
+
 
 dev_dependencies:
   flutter_test:
@@ -65,16 +70,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/logo1.png
-    - assets/logo.png
-    - assets/Mask group.png
-    - assets/Vector.png
-    - assets/Frame 35@2x.png
-    - assets/istockphoto.png
-    - assets/Maskgroup1.png
-    - assets/7502326_location_map_pin_gps_mosque_icon 1.png
-    - assets/1564534_customer_man_user_account_profile_icon 1.png
-    - assets/1891021_approved_check_checkbox_checkmark_confirm_icon 1.png
+    - assets/images/
+    - assets/lang/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:karem2/localization/MyLocalization.dart';
+import 'package:karem2/screens/register_page.dart';
 import 'package:karem2/widgets/notification_container.dart';
 
 class NotificatinScreen extends StatelessWidget {
@@ -30,15 +32,32 @@ class NotificatinScreen extends StatelessWidget {
                   // زر الرجوع
                   Positioned(
                     right: 0,
-                    child: IconButton(
-                      icon: const Icon(Icons.arrow_back),
-                      onPressed: () => Navigator.pop(context),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RegisterPage(),
+                          ),
+                        );
+                      },
+                      child:  Icon(Icons.arrow_back),
+                      style: ElevatedButton.styleFrom(
+                        elevation: 0, // إزالة الظل
+                        backgroundColor:
+                            Colors.transparent, // جعل الخلفية شفافة (اختياري)
+                        foregroundColor: Colors.black, // لون الأيقونة
+                        padding: EdgeInsets.zero, // إزالة الحشو الداخلي
+                        shape: const CircleBorder(), // شكل دائري للأيقونة
+                        // splashFactory:
+                        //     NoSplash.splashFactory, // إزالة تأثير الضغط
+                      ),
                     ),
                   ),
                   // العنوان
-                  const Center(
+                  Center(
                     child: Text(
-                      'التنبيهات',
+                      getTranslated(context, "notification"),
                       textDirection: TextDirection.rtl,
                       style: TextStyle(
                         fontSize: 25,
@@ -54,15 +73,14 @@ class NotificatinScreen extends StatelessWidget {
               message:
                   "تم إضافة ملاحظة لك في دورة تلعم التجويد الصحيح من قبل المعلم",
             ),
-             NotificationContainer(
+            NotificationContainer(
               Time: "منذ 3 دقائق",
               message:
                   "تم إضافة ملاحظة لك في دورة تلعم التجويد الصحيح من قبل المعلم",
             ),
-             NotificationContainer(
+            NotificationContainer(
               Time: "منذ 3 دقائق",
-              message:
-                  "تم اجتياز الاختبار بنجاح",
+              message: "تم اجتياز الاختبار بنجاح",
             ),
           ],
         ),

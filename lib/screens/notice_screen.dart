@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:karem2/localization/MyLocalization.dart';
+import 'package:karem2/screens/register_page.dart';
 import 'package:karem2/widgets/show_dialog.dart';
 
 class NoticeScreen extends StatelessWidget {
@@ -30,14 +32,32 @@ class NoticeScreen extends StatelessWidget {
                 children: [
                   Positioned(
                     right: 0,
-                    child: IconButton(
-                      icon: const Icon(Icons.arrow_back),
-                      onPressed: () => Navigator.pop(context),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RegisterPage(),
+                          ),
+                        );
+                      },
+                      child:  Icon(Icons.arrow_back),
+                      style: ElevatedButton.styleFrom(
+                        
+                        elevation: 0, // إزالة الظل
+                        backgroundColor:
+                            Colors.transparent, // جعل الخلفية شفافة (اختياري)
+                        foregroundColor: Colors.black, // لون الأيقونة
+                        padding: EdgeInsets.zero, // إزالة الحشو الداخلي
+                        shape: const CircleBorder(), // شكل دائري للأيقونة
+                        // splashFactory:
+                        //     NoSplash.splashFactory, // إزالة تأثير الضغط
+                      ),
                     ),
                   ),
-                  const Center(
+                   Center(
                     child: Text(
-                      'الملاحظات',
+                      getTranslated(context, "notices"),
                       textDirection: TextDirection.rtl,
                       style: TextStyle(
                         fontSize: 25,

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:karem2/localization/MyLocalization.dart';
 import 'package:karem2/screens/Course_details.dart';
 
 class HomeContent extends StatelessWidget {
-   HomeContent({super.key});
+  HomeContent({super.key});
 
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,13 +28,13 @@ class HomeContent extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: const Center(
+                    child: Center(
                       child: Text(
-                        "مسجدي",
+                        getTranslated(context, "mosque"),
                         style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
+                          fontSize: 32,
                           color: Color(0xff18392b),
+                          fontFamily: 'pacifico',
                         ),
                       ),
                     ),
@@ -63,14 +63,14 @@ class HomeContent extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "الكل ",
+                              "دوراتي التعليمية",
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             Text(
-                              "دوراتي التعليمية",
+                              "الكل ",
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
@@ -112,15 +112,9 @@ class HomeContent extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  IconButton(
-                                    icon: Icon(
-                                      Icons.favorite_border,
-                                      color: Colors.black,
-                                    ),
-                                    onPressed: () {},
-                                  ),
                                   Expanded(
                                     child: Text(
                                       "الطريق إلى التلاوة الصحيحة",
@@ -128,10 +122,28 @@ class HomeContent extends StatelessWidget {
                                       textAlign: TextAlign.end,
                                     ),
                                   ),
+                                  SizedBox(width: 100,),
+                                  IconButton(
+                                    icon: Icon(
+                                      Icons.favorite_border,
+                                      color: Colors.black,
+                                    ),
+                                    onPressed: () {},
+                                  ),
                                 ],
                               ),
                               Text(
-                                "دورة عملية تهدف إلى تعليم أحكام التجويد الأساسية وتصحيح النطق ومخارج الحروف",
+                                "دورة عملية تهدف إلى تعليم أحكام التجويد الأساسية",
+                                                    //  " وتصحيح النطق ومخارج الحروف",
+
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xffa8a7a7),
+                                ),
+                                textAlign: TextAlign.end,
+                              ),
+                              Text(
+                                " وتصحيح النطق ومخارج الحروف",
                                 style: TextStyle(
                                   fontSize: 14,
                                   color: Color(0xffa8a7a7),
@@ -162,10 +174,12 @@ class HomeContent extends StatelessWidget {
                               fixedSize: Size(288, 42),
                             ),
                             onPressed: () {
-                               Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => CourseDetails()),
-                        );
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => CourseDetails(),
+                                ),
+                              );
                             },
                             child: Text(
                               "التفاصيل",

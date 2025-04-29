@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:karem2/screens/HomeScreen.dart';
-import 'package:karem2/widgets/custom_button.dart';
+
 
 
 
@@ -71,16 +71,31 @@ class _EndScreen extends State<EndScreen> {
                     ],
                   ),
                   SizedBox(height: 16),
-                  CustomButon(
-                    text: ('تسجيل دخول '),
-                     onTap: () {
-                      // الانتقال إلى Homescreen عند النقر
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => Homescreen()),
-                      );
-                    },
+                  ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Homescreen(),
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'تسجيل دخول',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 15,
+                      horizontal: 30,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    backgroundColor: Color(0xff18392b),
+                    foregroundColor: Colors.white,
+                  ),
+                ),
                   SizedBox(height: 10),
                 ],
               ),

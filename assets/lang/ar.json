@@ -1,4 +1,17 @@
 {
   "title": "الحلقات المسجدية",
-  "welcome": "أهلاً بعودتك"
+  "welcome": "أهلاً بعودتك",
+  "enterData": "أدخل البيانات التالية لتتمكن من",
+  "AccessYourAccount": "الوصول إلى حسابك",
+  "IdentificationNumber": "الرقم التعريفي:",
+  "passWord": "كلمة المرور :",
+  "enterPassword": "أدخل كلمة المرور الجديدة",
+  "enterNewPassWord": "قم بإدخال كلمة المرور الجديدة ويجب أن",
+  "Strong": "تكون قوية",
+  "newPassWord": "كلمة المرور الجديدة :",
+  "sureNewPassWord": " تأكيد كلمة المرور الجديدة :",
+  "mosque": "مسجدي",
+  "notices": "الملاحظات",
+  "notification": "التنبيهات",
+  "profile": "الملف الشخصي"
 }

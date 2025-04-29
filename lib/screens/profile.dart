@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:karem2/localization/MyLocalization.dart';
 import 'package:karem2/screens/new_password.dart';
 import 'package:karem2/screens/register_page.dart';
 import 'package:karem2/widgets/build_Ltr_Container.dart';
@@ -9,7 +10,6 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // تم إزالة appBar واستبداله ب Container في body
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -19,7 +19,6 @@ class Profile extends StatelessWidget {
         ),
         child: Column(
           children: [
-            // Container بديل عن AppBar
             Container(
               height: kToolbarHeight + MediaQuery.of(context).padding.top,
               padding: EdgeInsets.only(
@@ -31,19 +30,17 @@ class Profile extends StatelessWidget {
               child: Stack(
                 alignment: Alignment.center,
                 children: [
-                  // زر الرجوع
                   Positioned(
                     right: 0,
                     child: IconButton(
                       icon: const Icon(Icons.arrow_back_sharp),
-                      
+
                       onPressed: () => Navigator.pop(context),
                     ),
                   ),
-                  // العنوان
-                  const Center(
+                   Center(
                     child: Text(
-                      'الملف الشخصي',
+                      getTranslated(context, "profile"),
                       textDirection: TextDirection.rtl,
                       style: TextStyle(
                         fontSize: 20,
@@ -54,15 +51,12 @@ class Profile extends StatelessWidget {
                 ],
               ),
             ),
-
-            // باقي محتوى الصفحة
             Expanded(
               child: SingleChildScrollView(
                 child: Center(
                   child: Column(
                     children: [
                       const SizedBox(height: 20),
-                      // أيقونة البروفايل
                       Container(
                         decoration: const BoxDecoration(shape: BoxShape.circle),
                         child: const Padding(
@@ -74,7 +68,6 @@ class Profile extends StatelessWidget {
                           ),
                         ),
                       ),
-                      // ... باقي العناصر كما هي
                       LtrContainer(
                         children: [
                           const Text('الرقم التعريفي : '),
@@ -83,8 +76,6 @@ class Profile extends StatelessWidget {
                           const SizedBox(width: 10),
                         ],
                       ),
-
-                      // باقي العناصر بنفس التعديل...
                       LtrContainer(
                         children: [
                           const Icon(Icons.mosque),
@@ -121,34 +112,7 @@ class Profile extends StatelessWidget {
                           const Icon(Icons.lock),
                           const SizedBox(width: 10),
                           const Text('تغيير كلمة المرور'),
-                           Container(
-                            width: 25,
-                            height: 25,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: IconButton(
-                            icon:  Icon(Icons.arrow_back_ios_new),  onPressed: () {
-                               Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => NewPassword()),
-                        );
-                            }, 
-                               
-                            ),
-                          ),
-                        ],
-                      ),
-
-                      LtrContainer(
-                        children: [
-                          const Icon(Icons.logout, color: Colors.red),
-                          const SizedBox(width: 10),
-                          const Text(
-                            'تسجيل الخروج',
-                            style: TextStyle(color: Colors.red),
-                          ),
+                          const SizedBox(width: 165),
                           Container(
                             width: 20,
                             height: 20,
@@ -156,14 +120,50 @@ class Profile extends StatelessWidget {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(8),
                             ),
-                            child:  IconButton(
-                            icon:  Icon(Icons.arrow_back_ios_new),  onPressed: () {
-                               Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => RegisterPage()),
-                        );
-                            }, 
-                               
+                            child: IconButton(
+                              icon: const Icon(Icons.arrow_forward_ios),
+                              padding: EdgeInsets.zero,
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => NewPassword(),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                      LtrContainer(
+                        children: [
+                          const Icon(Icons.logout, color: Colors.red),
+                          const SizedBox(
+                            width: 10,
+                          ), // المسافة بين أيقونة الخروج والنص
+                          const Text(
+                            'تسجيل الخروج',
+                            style: TextStyle(color: Colors.red),
+                          ),
+                          const SizedBox(width: 170),
+                          Container(
+                            width: 20,
+                            height: 20,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: IconButton(
+                              icon: const Icon(Icons.arrow_forward_ios),
+                              padding: EdgeInsets.zero,
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => RegisterPage(),
+                                  ),
+                                );
+                              },
                             ),
                           ),
                         ],

@@ -1,8 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:karem2/screens/new_password.dart';
 import 'package:karem2/screens/register_page.dart';
 
 
@@ -39,19 +36,19 @@ class _SplashScreenState extends State<SplashScreen>
    return Scaffold(
       body: Stack(
         children: [
-          // الصورة الخلفية
+            
           Image.asset(
-            'assets/images/mask group.png', // المسار إلى الصورة الخلفية
-            fit: BoxFit.cover, // تغطية الشاشة بالكامل
+            'assets/images/Mask group.png',   
+            fit: BoxFit.cover,  
             width: double.infinity,
             height: double.infinity,
           ),
           // اللوغو في المنتصف
           Center(
             child: Image.asset(
-              'assets/images/logo.png', // المسار إلى اللوغو
-              width: 150, // اضبط حجم اللوغو حسب الحاجة
-              height: 150,
+              'assets/images/logo-no-back.png',   
+              width: 300,     
+              height: 300,
             ),
           ),
         ],

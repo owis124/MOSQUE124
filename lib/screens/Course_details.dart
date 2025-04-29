@@ -117,131 +117,18 @@ class CourseDetails extends StatelessWidget {
                         //          _buildTabItem("إنجازاتي", 2),
                         // _buildTabItem("السجل اليومي", 1),
                         // _buildTabItem("الوصف", 0),
-                        Tab(child: _buildTabItem("الوصف",1)),
-                        Tab(child: _buildTabItem("السجل اليومي", 0)),
                         Tab(child: _buildTabItem("إنجازاتي", 2)),
+                        
+                        Tab(child: _buildTabItem("السجل اليومي", 0)),
+                        Tab(child: _buildTabItem("الوصف",1)),
+                        
                       ],
                     ),
                     Container(
                       height: 500,
                       child: TabBarView(
                         children: [
-                          ListView(
-                            children: [
-                              Column(
-                                children: [
-                                  const SizedBox(height: 15),
-                                  // Course Title
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 30,
-                                    ),
-                                    child: Text(
-                                      "دورة عملية تهدف إلى تعليم أحكام التجويد الأساسية وتصحيح النطق ومخارج الحروف تهدف هذه الدورة التعليمية إلى تمكين المشاركين من تحسين قراءتهم للقرآن الكريم من خلال تعلم أحكام التجويد الأساسية وتطبيقها بشكل عملي.",
-                                      textAlign: TextAlign.right,
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xff797979),
-                                        height: 1.5,
-                                        fontFamily: 'ArabicFont',
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(height: 5),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 30,
-                                    ),
-                                    child: Container(
-                                      width:
-                                          double
-                                              .infinity, // يأخذ العرض الكامل المتاح
-                                      alignment:
-                                          Alignment
-                                              .centerRight, // محاذاة المحتوى إلى اليمين
-                                      child: Text(
-                                        "محتوى الحلقات المسجدية",
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                          color: Colors.black,
-                                          fontFamily: 'ArabicFont',
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-
-                                  // Content List
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 8,
-                                    ),
-                                    child: Column(
-                                      textDirection: TextDirection.rtl,
-                                      mainAxisSize:
-                                          MainAxisSize
-                                              .min, // يقلل المساحة الإجمالية
-                                      children: [
-                                        _buildCompactLtrContainer(
-                                          'أساسيات التجويد',
-                                          'الدرس الأول',
-                                        ),
-                                        _buildCompactLtrContainer(
-                                          'مخارج الحروف وصفاتها',
-                                          'الدرس الثاني',
-                                        ),
-                                        _buildCompactLtrContainer(
-                                          'المدود وأنواعها',
-                                          'الدرس الثالث',
-                                        ),
-                                        _buildCompactLtrContainer(
-                                          'أحكام النون الساكنة والتنوين',
-                                          'الدرس الرابع',
-                                        ),
-                                        _buildCompactLtrContainer(
-                                          'الاختبار النهائي',
-                                          'الاختبار',
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              const SizedBox(height: 15),
-                              Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 20,
-                                  ),
-                                  child: ListView(
-                                    children: [
-                                      CustomDialogWidget(
-                                        date: "8/12/2024",
-                                        messageDialog:
-                                            "تأكد من قراءة الآيات ببطء وبتأنٍ لتجنب الأخطاء في النطق.",
-                                      ),
-                                      const SizedBox(height: 10),
-                                      CustomDialogWidget(
-                                        date: "7/12/2024",
-                                        messageDialog:
-                                            "الممارسة المستمرة مهمة جداً، حاول قراءة الآيات بشكل يومي لتحسين مهاراتك",
-                                      ),
-                                      const SizedBox(height: 10),
-                                      CustomDialogWidget(
-                                        date: "5/12/2024",
-                                        messageDialog:
-                                            "لا تتردد في القراءة أمام الآخرين، فالثقة بالنفس تساعدك على التحسن  عرض المزيد",
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-
+                         
                           Padding(
                             padding: const EdgeInsets.all(10),
                             child: Column(
@@ -330,6 +217,123 @@ class CourseDetails extends StatelessWidget {
                                 
                               ],
                             ),
+                          ),
+                          Column(
+                            children: [
+                              const SizedBox(height: 15),
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 20,
+                                  ),
+                                  child: ListView(
+                                    children: [
+                                      CustomDialogWidget(
+                                        date: "8/12/2024",
+                                        messageDialog:
+                                            "تأكد من قراءة الآيات ببطء وبتأنٍ لتجنب الأخطاء في النطق.",
+                                      ),
+                                      const SizedBox(height: 10),
+                                      CustomDialogWidget(
+                                        date: "7/12/2024",
+                                        messageDialog:
+                                            "الممارسة المستمرة مهمة جداً، حاول قراءة الآيات بشكل يومي لتحسين مهاراتك",
+                                      ),
+                                      const SizedBox(height: 10),
+                                      CustomDialogWidget(
+                                        date: "5/12/2024",
+                                        messageDialog:
+                                            "لا تتردد في القراءة أمام الآخرين، فالثقة بالنفس تساعدك على التحسن  عرض المزيد",
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+
+                         
+                           ListView(
+                            children: [
+                              Column(
+                                children: [
+                                  const SizedBox(height: 15),
+                                  // Course Title
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 30,
+                                    ),
+                                    child: Text(
+                                      "دورة عملية تهدف إلى تعليم أحكام التجويد الأساسية وتصحيح النطق ومخارج الحروف تهدف هذه الدورة التعليمية إلى تمكين المشاركين من تحسين قراءتهم للقرآن الكريم من خلال تعلم أحكام التجويد الأساسية وتطبيقها بشكل عملي.",
+                                      textAlign: TextAlign.right,
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Color(0xff797979),
+                                        height: 1.5,
+                                        fontFamily: 'ArabicFont',
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 5),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 30,
+                                    ),
+                                    child: Container(
+                                      width:
+                                          double
+                                              .infinity, // يأخذ العرض الكامل المتاح
+                                      alignment:
+                                          Alignment
+                                              .centerRight, // محاذاة المحتوى إلى اليمين
+                                      child: Text(
+                                        "محتوى الحلقات المسجدية",
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          color: Colors.black,
+                                          fontFamily: 'ArabicFont',
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+
+                                  // Content List
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 8,
+                                    ),
+                                    child: Column(
+                                      textDirection: TextDirection.rtl,
+                                      mainAxisSize:
+                                          MainAxisSize
+                                              .min, // يقلل المساحة الإجمالية
+                                      children: [
+                                        _buildCompactLtrContainer(
+                                          'أساسيات التجويد',
+                                          'الدرس الأول',
+                                        ),
+                                        _buildCompactLtrContainer(
+                                          'مخارج الحروف وصفاتها',
+                                          'الدرس الثاني',
+                                        ),
+                                        _buildCompactLtrContainer(
+                                          'المدود وأنواعها',
+                                          'الدرس الثالث',
+                                        ),
+                                        _buildCompactLtrContainer(
+                                          'أحكام النون الساكنة والتنوين',
+                                          'الدرس الرابع',
+                                        ),
+                                        _buildCompactLtrContainer(
+                                          'الاختبار النهائي',
+                                          'الاختبار',
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
                         ],
                       ),

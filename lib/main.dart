@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:karem2/screens/HomeScreen.dart';
-import 'package:karem2/screens/end_screen.dart';
-import 'package:karem2/screens/new_password.dart';
-import 'package:karem2/screens/register_page.dart';
 import 'package:karem2/splash_screen.dart';
-
 import 'localization/MyLocalization.dart';
 
 
@@ -32,7 +27,7 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
 
-      home: RegisterPage(), 
+      home: SplashScreen(), 
    );
   }
 }

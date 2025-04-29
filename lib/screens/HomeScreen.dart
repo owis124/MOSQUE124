@@ -16,10 +16,10 @@ class _HomescreenState extends State<Homescreen> {
   int myImdex = 0;
   final List<Widget> widgetlist = [
     // الصفحة الرئيسية الحالية
-    const Profile(),
-    NotificatinScreen(),
+    Profile(),
     NoticeScreen(),
-     HomeContent(),
+    NotificatinScreen(),
+    HomeContent(),
   ];
 
   @override
@@ -34,13 +34,16 @@ class _HomescreenState extends State<Homescreen> {
           });
         },
         currentIndex: myImdex,
+        activeColor: Color(0xff18392b),// لون الأيقونة النشطة (المحددة)
+        inactiveColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "ملفي"),
+          
+          BottomNavigationBarItem(icon: Icon(Icons.note), label: "الملاحظات"),
           BottomNavigationBarItem(
             icon: Icon(Icons.notifications),
             label: "التنبيهات",
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.note), label: "الملاحظات"),
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "الرئيسية"),
         ],
       ),

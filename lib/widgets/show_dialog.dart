@@ -4,9 +4,11 @@ class CustomDialogWidget extends StatelessWidget {
   const CustomDialogWidget({
     super.key,
     required this.messageDialog,
-    required this.date,
+    required this.date, 
+    //required this.title,
    // required this.message1,
   });
+  //final String title;
   final String date;
   final String messageDialog;
  //final String message1;
